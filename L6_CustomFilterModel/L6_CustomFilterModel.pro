@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-02-18T15:55:21
+# Project created by QtCreator 2020-03-06T09:50:55
 #
 #-------------------------------------------------
 
@@ -8,19 +8,15 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = WriteCSV
+TARGET = L6_CustomFilterModel
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    MySortFilterProxyModel.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    MySortFilterProxyModel.h
 
 FORMS    += mainwindow.ui
-
-
-unix:!macx: LIBS += -L$$PWD/CSVLib/ -lqtcsv
-
-INCLUDEPATH += $$PWD/CSVLib/include
-DEPENDPATH += $$PWD/CSVLib/include
